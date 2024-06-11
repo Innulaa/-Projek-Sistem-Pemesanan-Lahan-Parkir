@@ -59,3 +59,14 @@ bool validasiKataSandi(const string& kataSandi) {
 }
 
 
+
+
+bool loginPengguna(vector<Pengguna>& penggunaList, string nama, string kataSandi) {
+    for (Pengguna pengguna : penggunaList) {
+        if (pengguna.nama == nama && pengguna.kataSandi == kataSandi) {
+            return true;
+         }
+     }
+     return false;
+}
+ 
