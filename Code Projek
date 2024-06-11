@@ -80,5 +80,81 @@ void tampilkanLahanParkirTersedia(vector<LahanParkir>& lahanParkirList) {
         }
      }
 }
-       
+
+
+
+
+
+int pilihan;
+string nama, kataSandi, lokasi;
+
+while (true) { 
+      cout << "\nPilih menu:" << endl;
+      cout << "1. Registrasi Pengguna" << endl;
+      cout << "2. Login Pengguna" << endl;
+      cout << "3. Tampilkan Lahan Parkir Tersedia" << endl;
+      cout << "4. Pesan Lahan Parkir" << endl;
+      cout << "5. Cek Antrian" << endl;
+      cout << "6. Keluar" << endl;
+      cin >> pilihan;
+
+      switch (pilihan) {
+         case 1: 
+              registrasiPengguna(PenggunaList);
+              break;
+          case 2: 
+              cout << "Masukkan nama pengguna: ";
+              cin >> nama;
+              cout << "Masukkan kata sandi: ";
+              cin >> kata sandi;
+              if (loginPengguna(penggunaList, nama, kataSandi)) {
+                  cout << " Login berhasil!" << endl;
+              } else {
+                   cout << "Nama pengguna atau kata sandi salah!" << endl;
+              }
+              break;
+         case 3:
+                tampilkanLahanParkirTersedia(lahanParkirList);
+                break;
+            case 4:
+                cout << "Masukkan nama pengguna untuk memesan lahan parkir: ";
+                cin >> nama;
+                cout << "Masukkan lokasi lahan parkir: ";
+                cin >> lokasi;
+                {
+                    Pengguna* pengguna = cariPengguna(penggunaList, nama);
+
+                    if (pengguna != nullptr) {
+                        pesanLahanParkir(lahanParkirList, *pengguna, lokasi);
+                    } else {
+                        cout << "Pengguna tidak ditemukan. Silakan login terlebih dahulu." << endl;
+                    }
+                }
+                break;
+            case 5:
+                cout << "Masukkan nama pengguna untuk mengecek antrian: ";
+                cin >> nama;
+                cout << "Masukkan lokasi lahan parkir yang ingin dicek: ";
+                cin >> lokasi;
+                {
+
+                   Pengguna* pengguna = cariPengguna(penggunaList, nama);
+                    if (pengguna != nullptr) {
+                        cekAntrian(lahanParkirList, nama, lokasi);
+                    } else {
+                        cout << "Pengguna tidak ditemukan. Silakan login terlebih dahulu." << endl;
+                    }
+                }
+                break;
+            case 6:
+                cout << "Terima kasih telah menggunakan layanan kami!" << endl;
+                return 0;
+            default:
+                cout << "Pilihan tidak valid. Silakan coba lagi." << endl;
+                break;
+        }
+    }
+
+    return 0;
+}
 
