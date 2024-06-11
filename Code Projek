@@ -184,7 +184,7 @@ void cekAntrian(vector<LahanParkir>& lahanParkirList, const string& namaPengguna
 }
 
 int main() {
-    cout << "_-_-_-Selamat Datang di Sistem Pemesanan Lahan Parkir Online*--_*" << endl;
+    cout << "*-_-*-_-*Selamat Datang di Sistem Pemesanan Lahan Parkir Online*-_-*-_-*" << endl;
 
     vector<Pengguna> penggunaList;
     vector<LahanParkir> lahanParkirList = {
