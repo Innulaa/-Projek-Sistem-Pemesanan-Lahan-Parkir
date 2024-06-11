@@ -61,6 +61,7 @@ bool validasiKataSandi(const string& kataSandi) {
 
 
 
+
 bool loginPengguna(vector<Pengguna>& penggunaList, string nama, string kataSandi) {
     for (Pengguna pengguna : penggunaList) {
         if (pengguna.nama == nama && pengguna.kataSandi == kataSandi) {
@@ -70,7 +71,14 @@ bool loginPengguna(vector<Pengguna>& penggunaList, string nama, string kataSandi
      return false;
 }
 
-
+LahanParkir* cariLahanParkir(vector<LahanParkir>& lahanParkirList, string lokasi) {
+    for (LahanParkir& lahanParkir : lahanParkirList) {
+        if (lahanParkir.lokasi == lokasi) {
+            return &lahanParkir;
+        }
+    }
+    return nullptr;
+}
 
 void tampilkanLahanParkirTersedia(vector<LahanParkir>& lahanParkirList) {
     cout << "Lahan parkir yang tersedia: " << endl;
@@ -81,9 +89,45 @@ void tampilkanLahanParkirTersedia(vector<LahanParkir>& lahanParkirList) {
      }
 }
 
+void pesanLahanParkir(vector<LahanParkir>& lahanParkirList, Pengguna& pengguna, string lokasi) {
+    LahanParkir* lahanParkir = cariLahanParkir(lahanParkirList, lokasi);
+    if (lahanParkir != nullptr) {
+        if (lahanParkir->tersedia) {
+            cout << "Apakah Anda yakin ingin memesan lahan parkir ini? (Ya/Tidak): ";
+            string konfirmasi;
+            cin >> konfirmasi;
 
+            if (konfirmasi == "Ya" || konfirmasi == "ya") {
+                Pemesanan pemesanan(pengguna, *lahanParkir);
+                cout << "Selamat Anda sudah mendapatkan lahan parkir, ini adalah struk pembayaran Anda:" << endl;
+                cout << pemesanan.strukParkir << endl;
+                lahanParkir->tersedia = false;
+                pengguna.lokasiPesan = lokasi; // Set lokasi pesanan pengguna
+            } else {
+                cout << "Pemesanan dibatalkan." << endl;
+            }
+        } else {
+            cout << "Lahan parkir tidak tersedia! Anda akan dimasukkan ke dalam antrian." << endl;
+            lahanParkir->antrianPengguna.push(pengguna);  // Masukkan pengguna ke dalam antrian
+            pengguna.lokasiPesan = lokasi; // Set lokasi pesanan pengguna
+            cout << "Harap tunggu sebentar. Anda berada di nomor antrian " << lahanParkir->antrianPengguna.size() << "." << endl;
+        }
+    } else {
+        cout << "Lahan parkir tidak ditemukan!" << endl;
+    }
+}
 
+int main(){
+    cout << "*_*_*_*_* Selamat Datang di Sistem Pemesanan Lahan Parkir Online *_*_*_*_*" << endl;
 
+    vector<pengguna> penggunaList;
+    vector<LahanParkir> lahanParkirList;
+
+    lahanParkirList.emplace_back(LahanParkir("Unila", true, 5000));
+    lahanParkirList.emplace_back(LahanParkir("FKIP", true, 6000));
+    lahanParkirList.emplace_back(LahanParkir("FISIP", true, 5500));
+    lahanParkirList.emplace_back(LahanParkir("FMIPA", false, 4500));
+    lahanParkirList.emplace_back(LahanParkir("FEB", true, 5000));
 
 int pilihan;
 string nama, kataSandi, lokasi;
