@@ -65,7 +65,7 @@ bool validasiKataSandi(const string& kataSandi) {
     return true;
 }
 
-void registrasiPengguna(vector<pengguna>& penggunaList) {
+void registrasiPengguna(vector<Pengguna>& penggunaList) {
     string nama, kataSandi;
     cout << "Masukkan nama pengguna: ";
     cin >> nama;
@@ -73,12 +73,12 @@ void registrasiPengguna(vector<pengguna>& penggunaList) {
     cin >> kataSandi;
 
     while (!validasiKataSandi(kataSandi)) {
-        cout << "Kata sandi harus minimal 8 karakter, mengandung huruf kapital, angka, dan simbol. Silahkan coba lagi: ";
+        cout << "Kata sandi harus minimal 8 karakter, mengandung huruf kapital, angka, dan simbol. Silakan coba lagi: ";
         cin >> kataSandi;
     }
 
-    penggunaList.emplace_back(pengguna(nama, kataSandi));
-    cout << "Registrasi berhasil" << endl;
+    penggunaList.emplace_back(Pengguna(nama, kataSandi));
+    cout << "Registrasi berhasil!" << endl;
 }
 
 bool loginPengguna(vector<Pengguna>& penggunaList, string nama, string kataSandi) {
@@ -99,7 +99,7 @@ LahanParkir* cariLahanParkir(vector<LahanParkir>& lahanParkirList, string lokasi
     return nullptr;
 }
 
-Pengguna* cariPengguna(vector<pengguna>& penggunaList, string nama) {
+Pengguna* cariPengguna(vector<Pengguna>& penggunaList, string nama) {
     for (Pengguna& pengguna : penggunaList) {
         if (pengguna.nama == nama) {
             return &pengguna;
@@ -109,12 +109,12 @@ Pengguna* cariPengguna(vector<pengguna>& penggunaList, string nama) {
 }
 
 void tampilkanLahanParkirTersedia(vector<LahanParkir>& lahanParkirList) {
-    cout << "Lahan parkir yang tersedia: " << endl;
-    for (lahanParkir& lahanParkir : lahanParkirList) {
-        if (LahanParkir.tersedia) {
+    cout << "Lahan parkir yang tersedia:" << endl;
+    for (LahanParkir& lahanParkir : lahanParkirList) {
+        if (lahanParkir.tersedia) {
             cout << lahanParkir.lokasi << " - Harga: " << lahanParkir.harga << " IDR" << endl;
         }
-     }
+    }
 }
 
 void pesanLahanParkir(vector<LahanParkir>& lahanParkirList, Pengguna& pengguna, string lokasi) {
@@ -146,7 +146,7 @@ void pesanLahanParkir(vector<LahanParkir>& lahanParkirList, Pengguna& pengguna, 
     }
 }
 
-void cekAntrian(vector<LahanParkir>& lahanParkirList, const string& namaPengguna, cons string& lokasi) {
+void cekAntrian(vector<LahanParkir>& lahanParkirList, const string& namaPengguna, const string& lokasi) {
     LahanParkir* lahanParkir = cariLahanParkir(lahanParkirList, lokasi);
 
     if (lahanParkir != nullptr) {
