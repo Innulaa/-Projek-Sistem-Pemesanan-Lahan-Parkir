@@ -174,47 +174,47 @@ void cekAntrian(vector<LahanParkir>& lahanParkirList, const string& namaPengguna
     }
 }
 
-int main(){
-    cout << "*-_-*-_-*-_-*-_-* Selamat Datang di Sistem Pemesanan Lahan Parkir Online *-_-*-_-*-_-*-_-*" << endl;
+int main() {
+    cout << "_-_-_-Selamat Datang di Sistem Pemesanan Lahan Parkir Online*--_*" << endl;
 
-    vector<pengguna> penggunaList;
-    vector<LahanParkir> lahanParkirList;
+    vector<Pengguna> penggunaList;
+    vector<LahanParkir> lahanParkirList = {
+        LahanParkir("Unila", true, 5000),
+        LahanParkir("FKIP", true, 6000),
+        LahanParkir("FISIP", true, 5500),
+        LahanParkir("FEB", true, 5000)
+    };
 
-    lahanParkirList.emplace_back(LahanParkir("Unila", true, 5000));
-    lahanParkirList.emplace_back(LahanParkir("FKIP", true, 6000));
-    lahanParkirList.emplace_back(LahanParkir("FISIP", true, 5500));
-    lahanParkirList.emplace_back(LahanParkir("FMIPA", false, 4500));
-    lahanParkirList.emplace_back(LahanParkir("FEB", true, 5000));
+    int pilihan;
+    string nama, kataSandi, lokasi;
 
-int pilihan;
-string nama, kataSandi, lokasi;
+    while (true) {
+        cout << "\nPilih menu:" << endl;
+        cout << "1. Registrasi Pengguna" << endl;
+        cout << "2. Login Pengguna" << endl;
+        cout << "3. Tampilkan Lahan Parkir Tersedia" << endl;
+        cout << "4. Pesan Lahan Parkir" << endl;
+        cout << "5. Cek Antrian" << endl;
+        cout << "6. Keluar" << endl;
+        cout << "Pilihan: ";
+        cin >> pilihan;
 
-while (true) { 
-      cout << "\nPilih menu:" << endl;
-      cout << "1. Registrasi Pengguna" << endl;
-      cout << "2. Login Pengguna" << endl;
-      cout << "3. Tampilkan Lahan Parkir Tersedia" << endl;
-      cout << "4. Pesan Lahan Parkir" << endl;
-      cout << "5. Cek Antrian" << endl;
-      cout << "6. Keluar" << endl;
-      cin >> pilihan;
-
-      switch (pilihan) {
-         case 1: 
-              registrasiPengguna(PenggunaList);
-              break;
-          case 2: 
-              cout << "Masukkan nama pengguna: ";
-              cin >> nama;
-              cout << "Masukkan kata sandi: ";
-              cin >> kata sandi;
-              if (loginPengguna(penggunaList, nama, kataSandi)) {
-                  cout << " Login berhasil!" << endl;
-              } else {
-                   cout << "Nama pengguna atau kata sandi salah!" << endl;
-              }
-              break;
-         case 3:
+        switch (pilihan) {
+            case 1:
+                registrasiPengguna(penggunaList);
+                break;
+            case 2:
+                cout << "Masukkan nama pengguna: ";
+                cin >> nama;
+                cout << "Masukkan kata sandi: ";
+                cin >> kataSandi;
+                if (loginPengguna(penggunaList, nama, kataSandi)) {
+                    cout << "Login berhasil!" << endl;
+                } else {
+                    cout << "Nama pengguna atau kata sandi salah!" << endl;
+                }
+                break;
+            case 3:
                 tampilkanLahanParkirTersedia(lahanParkirList);
                 break;
             case 4:
@@ -223,6 +223,7 @@ while (true) {
                 cout << "Masukkan lokasi lahan parkir: ";
                 cin >> lokasi;
                 {
+                    // Cari pengguna
                     Pengguna* pengguna = cariPengguna(penggunaList, nama);
 
                     if (pengguna != nullptr) {
@@ -238,8 +239,8 @@ while (true) {
                 cout << "Masukkan lokasi lahan parkir yang ingin dicek: ";
                 cin >> lokasi;
                 {
-
-                   Pengguna* pengguna = cariPengguna(penggunaList, nama);
+                    // Validasi pengguna dan lokasi
+                    Pengguna* pengguna = cariPengguna(penggunaList, nama);
                     if (pengguna != nullptr) {
                         cekAntrian(lahanParkirList, nama, lokasi);
                     } else {
@@ -258,4 +259,3 @@ while (true) {
 
     return 0;
 }
-
