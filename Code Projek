@@ -14,10 +14,10 @@ public:
     string kataSandi;
     string lokasiPesan;
     Pengguna(string nama, string kataSandi, stringlokasiPesan =""){
-      this -> nama = nama;
-      this -> kataSandi = kataSandi;
-      this -> lokasiPesan = lokasiPesan;
-   }
+        this -> nama = nama;
+        this -> kataSandi = kataSandi;
+        this -> lokasiPesan = lokasiPesan;
+    }
 };
 
 class LahanParkir {
@@ -26,6 +26,7 @@ public:
    bool tersedia;
    double harga;
    queue<pengguna> antrianPengguna;
+
    LahanParkir(string lokasi, bool tersedia, double harga) {
        this->lokasi = lokasi;
        this->tersedia = tersedia;
@@ -39,15 +40,15 @@ public:
       LahanParkir lahanparkir;
       string strukParkir;
       Pemesanan(Pengguna pengguna, LahanParkir lahanparkir) : pengguna (pengguna), lahanParkir(lahanParkir) {
-      this->strukParkir = generateStrukParkir();
-}
-string generateStrukParkir() {
-      time_t now = time(0);
-      tm *1tm = localtime(&now);
-      stringstream ss;
-      ss << "Struk Parkir: " << pengguna.nama << " - " << lahanParkir.lokasi << " - " << 1900 + 1tm ->tm_mon << "-" << 1tm ->tm_mday << " " << 1tm-><<tm_hour << ":" << 1tm->tm_min << ":" <<1tm->tm_sec << "\nHarga: " << lahanParkir.harga << " IDR";
-      return ss.str();
-   }
+          this->strukParkir = generateStrukParkir();
+      }
+      string generateStrukParkir() {
+          time_t now = time(0);
+          tm *1tm = localtime(&now);
+          stringstream ss;
+          ss << "Struk Parkir: " << pengguna.nama << " - " << lahanParkir.lokasi << " - " << 1900 + 1tm ->tm_mon << "-" << 1tm ->tm_mday << " " << 1tm-><<tm_hour << ":" << 1tm->tm_min << ":" <<1tm->tm_sec << "\nHarga: " << lahanParkir.harga << " IDR";
+          return ss.str();
+      }
 };
 
 bool validasiKataSandi(const string& kataSandi) {
@@ -79,8 +80,8 @@ bool loginPengguna(vector<Pengguna>& penggunaList, string nama, string kataSandi
         if (pengguna.nama == nama && pengguna.kataSandi == kataSandi) {
             return true;
          }
-     }
-     return false;
+    }
+    return false;
 }
 
 LahanParkir* cariLahanParkir(vector<LahanParkir>& lahanParkirList, string lokasi) {
@@ -98,11 +99,12 @@ Pengguna* cariPengguna(vector<pengguna>& penggunaList, string nama) {
             return &pengguna;
         }
     }
+    return nullptr;
 }
 
 void tampilkanLahanParkirTersedia(vector<LahanParkir>& lahanParkirList) {
     cout << "Lahan parkir yang tersedia: " << endl;
-    for (lahanParkir.tersedia) {
+    for (lahanParkir& lahanParkir : lahanParkirList) {
         if (LahanParkir.tersedia) {
             cout << lahanParkir.lokasi << " - Harga: " << lahanParkir.harga << " IDR" << endl;
         }
@@ -123,6 +125,7 @@ void pesanLahanParkir(vector<LahanParkir>& lahanParkirList, Pengguna& pengguna, 
                 cout << pemesanan.strukParkir << endl;
                 lahanParkir->tersedia = false;
                 pengguna.lokasiPesan = lokasi; 
+                lahanParkir->penggunaPesan.push_back(pengguna);
             } else {
                 cout << "Pemesanan dibatalkan." << endl;
             }
