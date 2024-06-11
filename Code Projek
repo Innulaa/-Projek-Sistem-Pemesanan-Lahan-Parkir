@@ -36,6 +36,7 @@ public:
    }
 };
 
+
 class Pemesanan {
 public:
     Pengguna pengguna;
@@ -45,7 +46,6 @@ public:
         this->strukParkir = generateStrukParkir();
     }
     string generateStrukParkir() {
-        // Generate struk parkir dengan barcode
         time_t now = time(0);
         tm *ltm = localtime(&now);
         stringstream ss;
@@ -256,7 +256,7 @@ int main() {
                 }
                 break;
             case 6:
-                cout << "Terima kasih telah menggunakan layanan kami!" << endl;
+                cout << "Terima kasih telah menggunakan layanan kami!(⁠っ⁠.⁠❛⁠ ⁠ᴗ⁠ ⁠❛⁠.⁠)⁠っ" << endl;
                 return 0;
             default:
                 cout << "Pilihan tidak valid. Silakan coba lagi." << endl;
