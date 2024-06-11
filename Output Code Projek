@@ -1,6 +1,4 @@
-
-
-
+/tmp/wCVyDmXZCr.o
 _-_-_-Selamat Datang di Sistem Pemesanan Lahan Parkir Online*--_*
 
 Pilih menu:
@@ -11,35 +9,10 @@ Pilih menu:
 5. Cek Antrian
 6. Keluar
 Pilihan: 1
-Masukkan nama pengguna: INTAN
-Masukkan kata sandi: Ikatan76_
-
-
+Masukkan nama pengguna: Intan
+Masukkan kata sandi: 12345YHK
+Kata sandi harus minimal 8 karakter, mengandung huruf kapital, angka, dan simbol. Silakan coba lagi: Intan27_
 Registrasi berhasil!
-
-Pilih menu:
-1. Registrasi Pengguna
-2. Login Pengguna
-3. Tampilkan Lahan Parkir Tersedia
-4. Pesan Lahan Parkir
-5. Cek Antrian
-6. Keluar
-Pilihan: 2
-Masukkan nama pengguna: intan
-Masukkan kata sandi: Ikatan76_
-Nama pengguna atau kata sandi salah!
-
-Pilih menu:
-1. Registrasi Pengguna
-2. Login Pengguna
-3. Tampilkan Lahan Parkir Tersedia
-4. Pesan Lahan Parkir
-5. Cek Antrian
-6. Keluar
-Pilihan: 2
-Masukkan nama pengguna: INTAN
-Masukkan kata sandi: Ikatan76_
-Login berhasil!
 
 Pilih menu:
 1. Registrasi Pengguna
@@ -63,11 +36,23 @@ Pilih menu:
 5. Cek Antrian
 6. Keluar
 Pilihan: 4
-Masukkan nama pengguna untuk memesan lahan parkir: INTAN
-Masukkan lokasi lahan parkir: Unila
+Masukkan nama pengguna untuk memesan lahan parkir: Intan 
+Masukkan lokasi lahan parkir: FMIPA
+Lahan parkir tidak ditemukan!
+
+Pilih menu:
+1. Registrasi Pengguna
+2. Login Pengguna
+3. Tampilkan Lahan Parkir Tersedia
+4. Pesan Lahan Parkir
+5. Cek Antrian
+6. Keluar
+Pilihan: 4
+Masukkan nama pengguna untuk memesan lahan parkir: Intan
+Masukkan lokasi lahan parkir: FEB
 Apakah Anda yakin ingin memesan lahan parkir ini? (Ya/Tidak): Ya
 Selamat Anda sudah mendapatkan lahan parkir, ini adalah struk pembayaran Anda:
-Struk Parkir: INTAN - Unila - 2024-6-11 14:29:47
+Struk Parkir: Intan - FEB - 2024-6-11 16:17:10
 Harga: 5000 IDR
 
 Pilih menu:
@@ -77,10 +62,11 @@ Pilih menu:
 4. Pesan Lahan Parkir
 5. Cek Antrian
 6. Keluar
-Pilihan: 5
-Masukkan nama pengguna untuk mengecek antrian: INTAN
-Masukkan lokasi lahan parkir yang ingin dicek: Unila
-Cek antrian di lokasi: Unila: Pengguna dengan nama INTAN sudah memesan lahan parkir di lokasi ini.
+Pilihan: 3
+Lahan parkir yang tersedia:
+Unila - Harga: 5000 IDR
+FKIP - Harga: 6000 IDR
+FISIP - Harga: 5500 IDR
 
 Pilih menu:
 1. Registrasi Pengguna
@@ -89,5 +75,45 @@ Pilih menu:
 4. Pesan Lahan Parkir
 5. Cek Antrian
 6. Keluar
-Pilihan: 
-=== Session Ended. Please Run the code again ===
+Pilihan: 4
+Masukkan nama pengguna untuk memesan lahan parkir: Intan
+Masukkan lokasi lahan parkir: FISIP
+Apakah Anda yakin ingin memesan lahan parkir ini? (Ya/Tidak): Tidak
+Pemesanan dibatalkan.
+
+Pilih menu:
+1. Registrasi Pengguna
+2. Login Pengguna
+3. Tampilkan Lahan Parkir Tersedia
+4. Pesan Lahan Parkir
+5. Cek Antrian
+6. Keluar
+Pilihan: 5
+Masukkan nama pengguna untuk mengecek antrian: Intan
+Masukkan lokasi lahan parkir yang ingin dicek: FEB
+Cek antrian di lokasi: FEB: Pengguna dengan nama Intan sudah memesan lahan parkir di lokasi ini.
+
+Pilih menu:
+1. Registrasi Pengguna
+2. Login Pengguna
+3. Tampilkan Lahan Parkir Tersedia
+4. Pesan Lahan Parkir
+5. Cek Antrian
+6. Keluar
+Pilihan: 5
+Masukkan nama pengguna untuk mengecek antrian: Intan
+Masukkan lokasi lahan parkir yang ingin dicek: FISIP
+Cek antrian di lokasi: FISIP: Pengguna dengan nama Intan tidak dalam antrian di lokasi ini.
+
+Pilih menu:
+1. Registrasi Pengguna
+2. Login Pengguna
+3. Tampilkan Lahan Parkir Tersedia
+4. Pesan Lahan Parkir
+5. Cek Antrian
+6. Keluar
+Pilihan: 6
+Terima kasih telah menggunakan layanan kami! (⁠っ⁠.⁠❛⁠ ⁠ᴗ⁠ ⁠❛⁠.⁠)⁠っ
+
+
+=== Code Execution Successful ===
