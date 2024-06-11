@@ -25,7 +25,9 @@ public:
    string lokasi;
    bool tersedia;
    double harga;
-   queue<pengguna> antrianPengguna;
+   queue<Pengguna> antrianPengguna;
+   vector<Pengguna> penggunaPesan;
+   
 
    LahanParkir(string lokasi, bool tersedia, double harga) {
        this->lokasi = lokasi;
