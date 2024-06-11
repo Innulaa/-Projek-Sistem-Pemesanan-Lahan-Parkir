@@ -48,6 +48,12 @@ string generateStrukParkir() {
    }
 };
 
-
+bool validasiKataSandi(const string& kataSandi) {
+    if (kataSandi.length() < 8) return false;
+    if (!regex_search(kataSandi, regex("[A-Z]"))) return false;
+    if (!regex_search(kataSandi, regex("[0-9]"))) return false;
+    if (!regex_search(kataSandi, regex("[^a-zA-Z0-9]"))) return false;
+    return true;
+}
 
 
