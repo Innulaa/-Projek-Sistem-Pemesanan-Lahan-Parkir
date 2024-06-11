@@ -69,4 +69,16 @@ bool loginPengguna(vector<Pengguna>& penggunaList, string nama, string kataSandi
      }
      return false;
 }
- 
+
+
+
+void tampilkanLahanParkirTersedia(vector<LahanParkir>& lahanParkirList) {
+    cout << "Lahan parkir yang tersedia: " << endl;
+    for (lahanParkir.tersedia) {
+        if (LahanParkir.tersedia) {
+            cout << lahanParkir.lokasi << " - Harga: " << lahanParkir.harga << " IDR" << endl;
+        }
+     }
+}
+       
+
