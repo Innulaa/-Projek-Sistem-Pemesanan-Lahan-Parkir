@@ -102,14 +102,14 @@ void pesanLahanParkir(vector<LahanParkir>& lahanParkirList, Pengguna& pengguna, 
                 cout << "Selamat Anda sudah mendapatkan lahan parkir, ini adalah struk pembayaran Anda:" << endl;
                 cout << pemesanan.strukParkir << endl;
                 lahanParkir->tersedia = false;
-                pengguna.lokasiPesan = lokasi; // Set lokasi pesanan pengguna
+                pengguna.lokasiPesan = lokasi; 
             } else {
                 cout << "Pemesanan dibatalkan." << endl;
             }
         } else {
             cout << "Lahan parkir tidak tersedia! Anda akan dimasukkan ke dalam antrian." << endl;
-            lahanParkir->antrianPengguna.push(pengguna);  // Masukkan pengguna ke dalam antrian
-            pengguna.lokasiPesan = lokasi; // Set lokasi pesanan pengguna
+            lahanParkir->antrianPengguna.push(pengguna);  
+            pengguna.lokasiPesan = lokasi; 
             cout << "Harap tunggu sebentar. Anda berada di nomor antrian " << lahanParkir->antrianPengguna.size() << "." << endl;
         }
     } else {
@@ -118,7 +118,7 @@ void pesanLahanParkir(vector<LahanParkir>& lahanParkirList, Pengguna& pengguna, 
 }
 
 int main(){
-    cout << "*_*_*_*_* Selamat Datang di Sistem Pemesanan Lahan Parkir Online *_*_*_*_*" << endl;
+    cout << "*-_-*-_-*-_-*-_-* Selamat Datang di Sistem Pemesanan Lahan Parkir Online *-_-*-_-*-_-*-_-*" << endl;
 
     vector<pengguna> penggunaList;
     vector<LahanParkir> lahanParkirList;
