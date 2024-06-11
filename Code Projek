@@ -58,6 +58,23 @@ bool validasiKataSandi(const string& kataSandi) {
     return true;
 }
 
+void registrasiPengguna(vector<pengguna>& penggunaList) {
+    string nama, kataSandi;
+    cout << "Masukkan nama pengguna: ";
+    cin >> nama;
+    cout << "Masukkan kata sandi: ";
+    cin >> kataSandi;
+
+    while (!validasiKataSandi(kataSandi)) {
+        cout << "Kata sandi harus minimal 8 karakter, mengandung huruf kapital, angka, dan simbol. Silahkan coba lagi: ";
+        cin >> kataSandi;
+    }
+
+    penggunaList.emplace_back(pengguna(nama, kataSandi));
+    cout << "Registrasi berhasil" << endl;
+}
+
+
 
 
 
