@@ -38,19 +38,23 @@ public:
 
 class Pemesanan {
 public:
-      Pengguna pengguna;
-      LahanParkir lahanparkir;
-      string strukParkir;
-      Pemesanan(Pengguna pengguna, LahanParkir lahanparkir) : pengguna (pengguna), lahanParkir(lahanParkir) {
-          this->strukParkir = generateStrukParkir();
-      }
-      string generateStrukParkir() {
-          time_t now = time(0);
-          tm *1tm = localtime(&now);
-          stringstream ss;
-          ss << "Struk Parkir: " << pengguna.nama << " - " << lahanParkir.lokasi << " - " << 1900 + 1tm ->tm_mon << "-" << 1tm ->tm_mday << " " << 1tm-><<tm_hour << ":" << 1tm->tm_min << ":" <<1tm->tm_sec << "\nHarga: " << lahanParkir.harga << " IDR";
-          return ss.str();
-      }
+    Pengguna pengguna;
+    LahanParkir lahanParkir;
+    string strukParkir;
+    Pemesanan(Pengguna pengguna, LahanParkir lahanParkir) : pengguna(pengguna), lahanParkir(lahanParkir) {
+        this->strukParkir = generateStrukParkir();
+    }
+    string generateStrukParkir() {
+        // Generate struk parkir dengan barcode
+        time_t now = time(0);
+        tm *ltm = localtime(&now);
+        stringstream ss;
+        ss << "Struk Parkir: " << pengguna.nama << " - " << lahanParkir.lokasi << " - " 
+           << 1900 + ltm->tm_year << "-" << 1 + ltm->tm_mon << "-" << ltm->tm_mday << " "
+           << ltm->tm_hour << ":" << ltm->tm_min << ":" << ltm->tm_sec
+           << "\nHarga: " << lahanParkir.harga << " IDR";
+        return ss.str();
+    }
 };
 
 bool validasiKataSandi(const string& kataSandi) {
