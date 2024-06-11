@@ -92,6 +92,14 @@ LahanParkir* cariLahanParkir(vector<LahanParkir>& lahanParkirList, string lokasi
     return nullptr;
 }
 
+Pengguna* cariPengguna(vector<pengguna>& penggunaList, string nama) {
+    for (Pengguna& pengguna : penggunaList) {
+        if (pengguna.nama == nama) {
+            return &pengguna;
+        }
+    }
+}
+
 void tampilkanLahanParkirTersedia(vector<LahanParkir>& lahanParkirList) {
     cout << "Lahan parkir yang tersedia: " << endl;
     for (lahanParkir.tersedia) {
