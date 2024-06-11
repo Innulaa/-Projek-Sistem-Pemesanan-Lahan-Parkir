@@ -8,14 +8,14 @@
 
 class Pengguna{
 public:
-string nama;
-string kataSandi;
-string lokasiPesan;
-Pengguna(string nama, string kataSandi, stringlokasiPesan =""){
-this -> nama = nama;
-this -> kataSandi = kataSandi;
-this -> lokasiPesan = lokasiPesan;
-}
+    string nama;
+    string kataSandi;
+    string lokasiPesan;
+    Pengguna(string nama, string kataSandi, stringlokasiPesan =""){
+      this -> nama = nama;
+      this -> kataSandi = kataSandi;
+      this -> lokasiPesan = lokasiPesan;
+   }
 };
 
 class LahanParkir {
