@@ -1,0 +1,93 @@
+
+
+
+_-_-_-Selamat Datang di Sistem Pemesanan Lahan Parkir Online*--_*
+
+Pilih menu:
+1. Registrasi Pengguna
+2. Login Pengguna
+3. Tampilkan Lahan Parkir Tersedia
+4. Pesan Lahan Parkir
+5. Cek Antrian
+6. Keluar
+Pilihan: 1
+Masukkan nama pengguna: INTAN
+Masukkan kata sandi: Ikatan76_
+
+
+Registrasi berhasil!
+
+Pilih menu:
+1. Registrasi Pengguna
+2. Login Pengguna
+3. Tampilkan Lahan Parkir Tersedia
+4. Pesan Lahan Parkir
+5. Cek Antrian
+6. Keluar
+Pilihan: 2
+Masukkan nama pengguna: intan
+Masukkan kata sandi: Ikatan76_
+Nama pengguna atau kata sandi salah!
+
+Pilih menu:
+1. Registrasi Pengguna
+2. Login Pengguna
+3. Tampilkan Lahan Parkir Tersedia
+4. Pesan Lahan Parkir
+5. Cek Antrian
+6. Keluar
+Pilihan: 2
+Masukkan nama pengguna: INTAN
+Masukkan kata sandi: Ikatan76_
+Login berhasil!
+
+Pilih menu:
+1. Registrasi Pengguna
+2. Login Pengguna
+3. Tampilkan Lahan Parkir Tersedia
+4. Pesan Lahan Parkir
+5. Cek Antrian
+6. Keluar
+Pilihan: 3
+Lahan parkir yang tersedia:
+Unila - Harga: 5000 IDR
+FKIP - Harga: 6000 IDR
+FISIP - Harga: 5500 IDR
+FEB - Harga: 5000 IDR
+
+Pilih menu:
+1. Registrasi Pengguna
+2. Login Pengguna
+3. Tampilkan Lahan Parkir Tersedia
+4. Pesan Lahan Parkir
+5. Cek Antrian
+6. Keluar
+Pilihan: 4
+Masukkan nama pengguna untuk memesan lahan parkir: INTAN
+Masukkan lokasi lahan parkir: Unila
+Apakah Anda yakin ingin memesan lahan parkir ini? (Ya/Tidak): Ya
+Selamat Anda sudah mendapatkan lahan parkir, ini adalah struk pembayaran Anda:
+Struk Parkir: INTAN - Unila - 2024-6-11 14:29:47
+Harga: 5000 IDR
+
+Pilih menu:
+1. Registrasi Pengguna
+2. Login Pengguna
+3. Tampilkan Lahan Parkir Tersedia
+4. Pesan Lahan Parkir
+5. Cek Antrian
+6. Keluar
+Pilihan: 5
+Masukkan nama pengguna untuk mengecek antrian: INTAN
+Masukkan lokasi lahan parkir yang ingin dicek: Unila
+Cek antrian di lokasi: Unila: Pengguna dengan nama INTAN sudah memesan lahan parkir di lokasi ini.
+
+Pilih menu:
+1. Registrasi Pengguna
+2. Login Pengguna
+3. Tampilkan Lahan Parkir Tersedia
+4. Pesan Lahan Parkir
+5. Cek Antrian
+6. Keluar
+Pilihan: 
+=== Session Ended. Please Run the code again ===
