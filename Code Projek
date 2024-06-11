@@ -137,6 +137,43 @@ void pesanLahanParkir(vector<LahanParkir>& lahanParkirList, Pengguna& pengguna, 
     }
 }
 
+void cekAntrian(vector<LahanParkir>& lahanParkirList, const string& namaPengguna, cons string& lokasi) {
+    LahanParkir* lahanParkir = cariLahanParkir(lahanParkirList, lokasi);
+
+    if (lahanParkir != nullptr) {
+        cout << "Cek antrian di lokasi: " << lahanParkir->lokasi << ":";
+
+        for (Pengguna& pengguna : lahanParkir->penggunaPesan) {
+             if (pengguna.nama == namaPengguna) {
+                 cout << "Pengguna dengan nama " << namaPengguna << "Sudah memesan lahan parkir di lokasi ini." << endl;
+                 return;
+             }
+        }
+
+        queue<Pengguna> antrianSementara = lahanParkir->antrianPengguna;
+        int posisi = 1;
+        bool found = false;
+
+        while (!antrianSementara.empty()) {
+            Pengguna pengguna = antrianSementara.front();
+            antrianSementara.pop();
+
+            if (pengguna.nama == namaPengguna) {
+                cout << "Pengguna dengan nama " << namaPengguna << " dalam antrian di lokasi ini dengan dengan nomor urut ke-" << posisi << "." << endl;
+                found = true;
+                break;
+            }
+            posisi++;
+        }
+
+        if (!found) {
+            cout << "Pengguna dengan nama " << namaPengguna << " tidak dalam antrian di lokasi ini." << endl;
+        }
+    } else {
+        cout << "Lahan parkir tidak ditemukan!" << endl;
+    }
+}
+
 int main(){
     cout << "*-_-*-_-*-_-*-_-* Selamat Datang di Sistem Pemesanan Lahan Parkir Online *-_-*-_-*-_-*-_-*" << endl;
 
