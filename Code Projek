@@ -13,7 +13,7 @@ public:
     string nama;
     string kataSandi;
     string lokasiPesan;
-    Pengguna(string nama, string kataSandi, stringlokasiPesan =""){
+    Pengguna(string nama, string kataSandi, string lokasiPesan =""){
         this -> nama = nama;
         this -> kataSandi = kataSandi;
         this -> lokasiPesan = lokasiPesan;
