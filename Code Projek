@@ -223,7 +223,6 @@ int main() {
                 cout << "Masukkan lokasi lahan parkir: ";
                 cin >> lokasi;
                 {
-                    // Cari pengguna
                     Pengguna* pengguna = cariPengguna(penggunaList, nama);
 
                     if (pengguna != nullptr) {
@@ -239,7 +238,6 @@ int main() {
                 cout << "Masukkan lokasi lahan parkir yang ingin dicek: ";
                 cin >> lokasi;
                 {
-                    // Validasi pengguna dan lokasi
                     Pengguna* pengguna = cariPengguna(penggunaList, nama);
                     if (pengguna != nullptr) {
                         cekAntrian(lahanParkirList, nama, lokasi);
