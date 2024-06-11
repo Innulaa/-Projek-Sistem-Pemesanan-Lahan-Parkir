@@ -6,6 +6,8 @@
 #include <sstream>
 #include <regex>
 
+using namespace std;
+
 class Pengguna{
 public:
     string nama;
