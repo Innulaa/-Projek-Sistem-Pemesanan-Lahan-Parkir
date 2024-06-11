@@ -18,4 +18,19 @@ this -> lokasiPesan = lokasiPesan;
 }
 };
 
+class LahanParkir {
+public:
+   string lokasi;
+   bool tersedia;
+   double harga;
+   queue<pengguna> antrianPengguna;
+   LahanParkir(string lokasi, bool tersedia, double harga) {
+       this->lokasi = lokasi;
+       this->tersedia = tersedia;
+       this->harga = harga;
+   }
+};
+
+
+
 
